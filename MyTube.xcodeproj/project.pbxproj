@@ -11,6 +11,12 @@
 		2143412228113C530031BF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143412128113C530031BF49 /* ContentView.swift */; };
 		2143412428113C540031BF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2143412328113C540031BF49 /* Assets.xcassets */; };
 		2143412728113C540031BF49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2143412628113C540031BF49 /* Preview Assets.xcassets */; };
+		2143412F28113C930031BF49 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2143412E28113C930031BF49 /* Alamofire */; };
+		2143413228113E210031BF49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143413128113E210031BF49 /* Constants.swift */; };
+		21434135281217790031BF49 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21434134281217790031BF49 /* Response.swift */; };
+		21434137281217A50031BF49 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21434136281217A50031BF49 /* Video.swift */; };
+		2143413A281221D50031BF49 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21434139281221D50031BF49 /* VideoModel.swift */; };
+		2143413C281225F20031BF49 /* VideoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2143413B281225F20031BF49 /* VideoPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		2143412128113C530031BF49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2143412328113C540031BF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2143412628113C540031BF49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2143413128113E210031BF49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21434134281217790031BF49 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		21434136281217A50031BF49 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		21434139281221D50031BF49 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		2143413B281225F20031BF49 /* VideoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2143412F28113C930031BF49 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,9 @@
 			children = (
 				2143411F28113C530031BF49 /* MyTubeApp.swift */,
 				2143412128113C530031BF49 /* ContentView.swift */,
+				21434138281221CC0031BF49 /* ViewModel */,
+				214341332812176B0031BF49 /* Model */,
+				2143413028113E0C0031BF49 /* Helpers */,
 				2143412328113C540031BF49 /* Assets.xcassets */,
 				2143412528113C540031BF49 /* Preview Content */,
 			);
@@ -65,6 +80,32 @@
 				2143412628113C540031BF49 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2143413028113E0C0031BF49 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2143413128113E210031BF49 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		214341332812176B0031BF49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21434134281217790031BF49 /* Response.swift */,
+				21434136281217A50031BF49 /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21434138281221CC0031BF49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21434139281221D50031BF49 /* VideoModel.swift */,
+				2143413B281225F20031BF49 /* VideoPreview.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = MyTube;
+			packageProductDependencies = (
+				2143412E28113C930031BF49 /* Alamofire */,
+			);
 			productName = MyTube;
 			productReference = 2143411C28113C530031BF49 /* MyTube.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 2143411328113C530031BF49;
+			packageReferences = (
+				2143412D28113C930031BF49 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2143411D28113C530031BF49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21434135281217790031BF49 /* Response.swift in Sources */,
+				2143413A281221D50031BF49 /* VideoModel.swift in Sources */,
 				2143412228113C530031BF49 /* ContentView.swift in Sources */,
 				2143412028113C530031BF49 /* MyTubeApp.swift in Sources */,
+				2143413228113E210031BF49 /* Constants.swift in Sources */,
+				2143413C281225F20031BF49 /* VideoPreview.swift in Sources */,
+				21434137281217A50031BF49 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2143412D28113C930031BF49 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2143412E28113C930031BF49 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2143412D28113C930031BF49 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2143411428113C530031BF49 /* Project object */;
 }
